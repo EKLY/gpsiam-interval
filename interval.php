@@ -92,6 +92,7 @@ if($TOKEN != '') {
                                         location_lat = ' . ($device['location']['lat']) . ', location_lng = ' . ($device['location']['lng']) . ',
                                         update_time = \'' . $db -> real_escape_string(date('Y-m-d H:i:s', $time)) . '\'
                                     where device_id = ' . $device_id);
+                                
                                 if(!$res) {
                                     trigger_error('DB ERROR [' . $db -> error . ']');
                                 }
