@@ -33,18 +33,18 @@ CREATE DATABASE tracking COLLATE 'utf8_general_ci';
 Optional for connect from outside
 
 ````
-CREATE USER 'tracking_outside'@'%' IDENTIFIED BY 'tracking456';
+CREATE USER 'tracking_outside'@'%' IDENTIFIED BY 'tracking_view';
 
-GRANT SELECT ON *.* TO 'tracking_outside'@'%' IDENTIFIED BY 'tracking456' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
+GRANT SELECT ON *.* TO 'tracking_view'@'%' IDENTIFIED BY 'tracking_view' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
 ````
 
 
-Optional for connect root from outside
+Optional for connect root from outside (Plz change password!)
 
 ````
-CREATE USER 'tracking_root'@'%' IDENTIFIED BY '789456zA';
+CREATE USER 'tracking_root'@'%' IDENTIFIED BY 'tracking_root';
 
-GRANT ALL PRIVILEGES ON *.* TO 'tracking_root'@'%' IDENTIFIED BY '789456zA' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
+GRANT ALL PRIVILEGES ON *.* TO 'tracking_root'@'%' IDENTIFIED BY 'tracking_root' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
 ````
 
 
