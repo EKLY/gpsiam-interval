@@ -1,4 +1,4 @@
-CREATE TABLE `device_state` (
+CREATE TABLE IF NOT EXISTS `device_state` (
   `device_id` smallint(5) unsigned NOT NULL,
   `state_port` tinyint(3) unsigned NOT NULL,
   `state_name` varchar(200) NOT NULL,

@@ -1,4 +1,4 @@
-CREATE TABLE `devices` (
+CREATE TABLE IF NOT EXISTS `devices` (
   `device_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `device_key` varchar(200) NOT NULL,
   `device_name` varchar(200) NOT NULL,

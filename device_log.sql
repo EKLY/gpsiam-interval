@@ -1,5 +1,4 @@
-
-CREATE TABLE `device_log` (
+CREATE TABLE IF NOT EXISTS `device_log` (
   `log_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `device_id` smallint(6) NOT NULL,
   `log_engine` tinyint(3) unsigned NOT NULL,
