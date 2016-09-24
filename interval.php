@@ -8,8 +8,13 @@ $MYSQL_pass = 'tracking';
 $MYSQL_db = 'tracking';
 
 $TOKEN = isset($argv[1]) ? $argv[1] : '';
+$COMMAND = isset($argv[2]) ? $argv[2] : '';
 
 $IS_UPDATE_CORE = date('G') + 0 == 0 && date('i') + 0 == 0;
+
+if($COMMAND === 'update-core') {
+    $IS_UPDATE_CORE = true;
+}
 
 
 if($TOKEN != '') {
