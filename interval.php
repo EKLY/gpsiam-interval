@@ -104,6 +104,19 @@ if($TOKEN != '') {
                                     }
                                 }
                                 
+                                if(!empty($device['ads'])) {
+                                    foreach($device['ads'] as $ad) {
+                                        if(isset($_ad[$ad['port'] + 0])) {
+                                            $_ad[$ad['port'] + 0] = $ad['value'];
+                                            if($IS_UPDATE_CORE) {
+                                                $db -> query('insert into device_ad (device_id, ad_port, ad_name, ad_unit) 
+                                                    values (' . $device_id . ', ' . ($ad['port'] + 0) . ', 
+                                                        \'' . $db -> real_escape_string($ad['name']) . '\', \'' . $db -> real_escape_string($ad['unit']) . '\')');
+                                            }
+                                        }
+                                    }
+                                }
+                                
                                 
                                 $res = $db -> query('update devices
                                     set device_name = \'' . $db -> real_escape_string($device['name']) . '\',
